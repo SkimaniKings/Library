@@ -1,11 +1,12 @@
 from django.urls import path, include
 from . import views
+from .views import SignUpView
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('register/', views.registration, name='registration'),
-    path('login/', views.registration, name='login'),
+    path('register/', SignUpView.as_view(), name='registration'),
+    # path('login/', LoginView.as_view(), name='login'),
     
 ]
 if settings.DEBUG:

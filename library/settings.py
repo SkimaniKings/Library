@@ -32,14 +32,16 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'bookhub',
-    'registration',
-    'crispy_forms',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #3rd party
+    'crispy_forms',
+    # Local Apps
+    'registration.apps.RegistrationConfig',
+    'bookhub.apps.BookhubConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,5 +138,6 @@ LOGIN_REDIRECT_URL = 'index'
 
 LOGOUT_REDIRECT_URL = 'login'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+AUTH_USER_MODEL = 'registration.CustomUser'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
