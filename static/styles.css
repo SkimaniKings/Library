@@ -1,3 +1,8 @@
 h1 {
     color: aqua;
 }
+.postform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
