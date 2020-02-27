@@ -1,11 +1,12 @@
 from django.urls import path, include
 from . import views
+from .views import PostCreateView
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('post/', views.post, name='post'),
+    path('post/', PostCreateView.as_view(), name='post'),
     
 ]
 if settings.DEBUG:
