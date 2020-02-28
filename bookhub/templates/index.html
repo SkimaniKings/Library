@@ -3,7 +3,11 @@
 {%include 'navbar.html'%}
 <div class="container">
 <h1>This is The landing page</h1>
+{%for posts in posts%}
 <a href="{%url 'post'%}"><button class="btn btn-outline-info" > Post Book</button></a>
+<h1>{{posts.description}}</h1>
+<img src = "{{posts.image.url}}" style="width: 100px;">
+{%endfor%}
 </div>
 
 {%endblock%}

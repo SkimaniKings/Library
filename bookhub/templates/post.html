@@ -7,7 +7,7 @@
         <h3 class="title text-center header">PostBook</h3>
 
 
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token%}
             {{form | crispy}}
             <a href=""><button class="btn btn-info" type="submit">Post Book</button></a>
